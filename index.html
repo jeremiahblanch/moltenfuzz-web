@@ -7,9 +7,10 @@
       
       body {
         align-items: flex-end;
-        background-size: contain;
+        background-size: cover;
         background-attachment: fixed;
-        background-image: url(https://lirp-cdn.multiscreensite.com/md/unsplash/dms3rep/multi/opt/photo-1527515234283-d93c5f8486a0-1920w.jpg);
+        background-position: 0 66%;
+        background-image: url(https://lirp-cdn.multiscreensite.com/md/unsplash/dms3rep/multi/opt/photo-1527515234283-d93c5f8486a0-800w.jpg);
         display: flex;
         font-family: Montserrat, Helvetica, Arial;
         font-size: 18px;
@@ -40,9 +41,15 @@
       p {
         margin-bottom: 0.5rem; 
       }
+      div.bordered {
+        border: 2px #333 solid;
+        padding: 2rem;
+      }
       
       @media (min-width: 800px) {
-         section:first-child {
+        background-image: url(https://lirp-cdn.multiscreensite.com/md/unsplash/dms3rep/multi/opt/photo-1527515234283-d93c5f8486a0-1920w.jpg);
+        
+        section:first-child {
            margin-top: calc(100vh - (800px * 0.1366) - 4rem);  
         }
         
@@ -69,6 +76,19 @@
       <p>
         This is a paragraph  
       </p>
+  </section>
+  <section>
+    <div class="bordered">
+      <h2>Heading 2</h2>
+       <p>
+        This is a paragraph  
+      </p>
+      <p>
+        This is a paragraph  
+      </p>
+      
+    </div>
+    
   </section>
 </body>
 </HTML>
