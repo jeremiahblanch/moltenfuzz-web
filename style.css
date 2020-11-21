@@ -1,0 +1,115 @@
+
+* {
+  box-sizing: border-box !important;
+}
+
+a:link, a:visited {
+  color: goldenrod;
+  text-decoration: none;
+}
+a:focus,a:hover {
+  text-decoration: underline;
+}
+
+body {
+  align-items: flex-end;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 66%;
+  background-image: url(https://lirp-cdn.multiscreensite.com/md/unsplash/dms3rep/multi/opt/photo-1527515234283-d93c5f8486a0-800w.jpg);
+  display: flex;
+  font-family: Montserrat, Helvetica, Arial;
+  font-size: 18px;
+  flex-direction: column;
+}
+#logo {
+  height: auto;
+  width: 102%;
+  margin: -1% -0.75% -0.75%;
+}
+section {
+   overflow: hidden;
+   width: 100%;
+   max-width: 800px;
+}
+section:first-child {
+  margin-top: 80vh;
+  padding: 0;
+  font-size: 0;
+  position: relative;
+}
+section:first-child::before {
+  content: '';
+  background-image: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,0,0,0.2) 65%, rgb(255 0 50 / 52%) 76%, rgba(255,0,0,0.1) 86%);
+  background-attachment: fixed;
+  bottom: 0;
+  top:0;
+  position: absolute;
+  width:100%;
+  z-index: -1
+}
+ 
+section.white {
+   background-color: #fff; 
+   padding: 2rem;
+   margin-bottom: 4rem;
+}
+section.black {
+   background-color: #111;
+   color:#fdfdfd;
+   padding: 2rem;
+   margin-bottom: 4rem;
+}
+h1 {
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+p {
+  margin-bottom: 0.5rem; 
+  line-height: 1.25;
+}
+p + ul {
+  margin-top: 0;
+}
+p + h3 {
+  margin-top: 2rem;
+}
+div.bordered {
+  border: 2px #333 solid;
+  padding: 2rem;
+}
+form label {
+  display: block;
+}
+button, input, textarea {
+  border: 1px solid #999;
+  display: block;
+  margin: 0.25rem 0 0.5rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+}
+textarea {
+  min-height: 6rem;
+}
+button {
+  background-color: #333;
+  border: 1px solid #333;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.25rem;
+  margin: 2rem auto 1rem;
+  padding: 0.5rem;
+}
+button:hover {
+  background-color: #666;
+}
+
+@media (min-width: 800px) {
+  body {
+     background-image: url(https://lirp-cdn.multiscreensite.com/md/unsplash/dms3rep/multi/opt/photo-1527515234283-d93c5f8486a0-1920w.jpg);
+  }        
+  section:first-child {
+     margin-top: calc(100vh - (800px * 0.1366) - 4rem);  
+  }
+  
+}
