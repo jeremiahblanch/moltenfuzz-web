@@ -33,14 +33,6 @@ section {
   padding: 1rem;
   width: 100%;
 }
-video {
-  z-index: -1;
-  position: fixed;
-  min-width:100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-}
 .logo-wrapper {
   border: 2rem white solid;
   margin-bottom: 0;
