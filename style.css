@@ -130,17 +130,17 @@ button:hover {
 .texture {
   background-image: url(texture5.png);
   background-repeat: repeat;
-  background-size: 7vh;
-  bottom: -100%;
-  left: -100%;
+  background-size: 3vh;
+  bottom: 0;
+  left: 0;
   position: fixed;
-  right: -100%;
-  top: -100%;
-  transform: rotate(112deg);
+  right: 0;
+  top: 0;
+  transform-origin: center;
   z-index: -1;
-  -webkit-animation: TextureAnimation 45s ease-in-out infinite;
-  -moz-animation: TextureAnimation 45s ease-in-out infinite;
-  animation: TextureAnimation 45s ease-in-out infinite;
+  -webkit-animation: ScaleAnimation 60s ease-in-out infinite;
+  -moz-animation: ScaleAnimation 60s ease-in-out infinite;
+  animation: ScaleAnimation 60s ease-in-out infinite;
 
 }
 .animated-gradient-background {
@@ -167,19 +167,21 @@ button:hover {
   100%{background-position:0% 51%}
 }
 
+@-webkit-keyframes ScaleAnimation {
+  0%{transform: scale(2) rotate(108deg)}
+  50%{transform: scale(4) rotate(176deg)}
+  100%{transform: scale(2) rotate(108deg)}
+}
 
-@-webkit-keyframes TextureAnimation {
-  0%{background-size:7vh;}
-  50%{background-size:20vh}
-  100%{background-size:7vh}
+@-moz-keyframes ScaleAnimation {
+  0%{transform: scale(2) rotate(108deg)}
+  50%{transform: scale(4) rotate(176deg)}
+  100%{transform: scale(2) rotate(108deg)}
 }
-@-moz-keyframes TextureAnimation {
-  0%{background-size:7vh}
-  50%{background-size:20vh}
-  100%{background-size:7vh}
-}
-@keyframes TextureAnimation {
-  0%{background-size:7vh}
-  50%{background-size:20vh}
-  100%{background-size:7vh}
+
+
+@keyframes ScaleAnimation {
+  0%{transform: scale(2) rotate(108deg)}
+  50%{transform: scale(4) rotate(176deg)}
+  100%{transform: scale(2) rotate(108deg)}
 }
