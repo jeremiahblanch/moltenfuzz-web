@@ -73,7 +73,7 @@ section.black {
 section.card-intro {
   font-size: 18pt;
   line-height: 1.75;
-  padding: 4rem 6rem 5rem;
+  padding: 4rem 15% 5rem;
 }
 h1 {
   font-size: 2rem;
@@ -134,7 +134,8 @@ button:hover {
 @media (min-width: 800px) {
   body {
      background-image: url(https://lirp-cdn.multiscreensite.com/md/unsplash/dms3rep/multi/opt/photo-1527515234283-d93c5f8486a0-1920w.jpg);
-  }        
+     background-position: 0 66%;
+  }
   section:first-child {
      margin-top: calc(100vh - (800px * 0.1366) - 4rem);  
   }
