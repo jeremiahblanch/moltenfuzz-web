@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400&display=swap');
 * {
   box-sizing: border-box !important;
 }
@@ -18,29 +18,43 @@ body {
   background-position: 0 66%;
   background-image: url(https://lirp-cdn.multiscreensite.com/md/unsplash/dms3rep/multi/opt/photo-1527515234283-d93c5f8486a0-800w.jpg);
   display: flex;
-  font-family: Montserrat, Helvetica, Arial;
-  font-size: 18px;
+  font-family: 'Noto Sans JP', Helvetica, Arial;
+  font-weight: 100;
+  font-size: 14pt;
+  line-height: 1.75;
   flex-direction: column;
 }
+b,strong { font-weight: 400}
+h1,h2,h3,h4,h5 { font-weight: 100;}
 #logo {
   height: auto;
   width: 102%;
   margin: -1% -0.75% -0.75%;
 }
 section {
-   overflow: hidden;
-   width: 100%;
-   max-width: 800px;
+  max-width: 800px;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  padding: 1rem;
+  width: 100%;
 }
 section:first-child {
   margin-top: 80vh;
+  margin-bottom: 0;
   padding: 0;
   font-size: 0;
   position: relative;
 }
 section:first-child::before {
   content: '';
-  background-image: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,0,0,0.2) 65%, rgb(255 0 50 / 52%) 76%, rgba(255,0,0,0.1) 86%);
+  background-image: linear-gradient(0deg,
+  rgba(0,0,0,0.5) 0%,
+  rgba(0,0,0,0.0) 20%,
+    rgba(0 0 0,0.5) 40%,
+    rgba(0 0 0,0.0) 60%,
+    rgba(0 0 0,0.5) 80%,
+    rgba(0 0 0,0.0) 100%
+  );
   background-attachment: fixed;
   bottom: 0;
   top:0;
@@ -51,14 +65,15 @@ section:first-child::before {
  
 section.white {
    background-color: #fff; 
-   padding: 2rem;
-   margin-bottom: 4rem;
 }
 section.black {
    background-color: #111;
    color:#fdfdfd;
-   padding: 2rem;
-   margin-bottom: 4rem;
+}
+section.card-intro {
+  font-size: 18pt;
+  line-height: 1.75;
+  padding: 4rem 6rem 5rem;
 }
 h1 {
   font-size: 2rem;
@@ -66,7 +81,6 @@ h1 {
 }
 p {
   margin-bottom: 0.5rem; 
-  line-height: 1.25;
 }
 p + ul {
   margin-top: 0;
@@ -74,9 +88,21 @@ p + ul {
 p + h3 {
   margin-top: 2rem;
 }
-div.bordered {
-  border: 2px #333 solid;
-  padding: 2rem;
+.site-logo {
+  height: auto;
+}
+.site-screenshot {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 7px 1px rgba(0,0,0,0.125);
+  height: auto;
+  margin: 1rem 1rem 2rem 0;
+  max-width: 200px;
+  vertical-align: top;
+  width: calc(33% - 1.5rem);
+}
+.bordered {
+  border: 1px #ccc solid;
+  padding: 1rem 2rem 2rem;
 }
 form label {
   display: block;

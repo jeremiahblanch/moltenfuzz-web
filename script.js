@@ -3,9 +3,9 @@
     var form = document.querySelector('form');
     var responseEl = document.querySelector('.form-response');
     
-    form.addEventListener('submit', handler);
+    form.addEventListener('submit', submitHandler);
 
-    function handler (ev) {
+    function submitHandler (ev) {
         ev.preventDefault();
         ev.stopImmediatePropagation();
         var data = new FormData(form);
