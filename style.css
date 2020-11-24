@@ -29,7 +29,7 @@ h1,h2,h3,h4,h5 { font-weight: 300;}
 section {
   max-width: 800px;
   overflow: hidden;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   padding: 1rem;
   width: 100%;
 }
@@ -84,12 +84,21 @@ p + h3 {
 .site-logo {
   height: auto;
 }
+.screenshot-container {
+  text-align: center;
+}
+@media (min-width: 800px) {
+  .screenshot-container {
+    text-align: left;
+  }
+}
 .site-screenshot {
   border: 1px solid #ddd;
   box-shadow: 5px 5px 7px 1px rgba(0,0,0,0.125);
   height: auto;
-  margin: 1rem 1rem 2rem 0;
+  margin: 1rem 0.5rem 1rem 0;
   max-width: 200px;
+  min-width: 110px;
   vertical-align: top;
   width: calc(33% - 1.5rem);
 }
@@ -125,7 +134,7 @@ button:hover {
 }
 
 .animated-gradient-background {
-  background: linear-gradient(90deg, #264653ff, #2a9d8fff, #e9c46aff, #f4a261ff, #e76f51ff);
+  background: linear-gradient(90deg, #264653ff, #2a9d8fff, #e9c46aff, #f4a261ff, #e76f51ff, #264653ff, #2a9d8fff, #e9c46aff, #f4a261ff, #e76f51ff);
   background-size: 500% 1000%;
   -webkit-animation: GradientAnimation 16s ease-in-out infinite;
   -moz-animation: GradientAnimation 16s ease-in-out infinite;
