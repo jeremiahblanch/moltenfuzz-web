@@ -124,7 +124,8 @@ button {
   font-family: inherit;
   font-size: 1.25rem;
   margin: 2rem auto 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
+  max-width: 400px;
 }
 button:hover {
   background-color: #666;
