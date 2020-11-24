@@ -10,13 +10,8 @@ a:link, a:visited {
 a:focus,a:hover {
   text-decoration: underline;
 }
-
 body {
   align-items: flex-end;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 0 0;
-  background-image: url(https://lirp-cdn.multiscreensite.com/md/unsplash/dms3rep/multi/opt/photo-1527515234283-d93c5f8486a0-800w.jpg);
   display: flex;
   font-family: 'Noto Sans JP', Helvetica, Arial;
   font-weight: 100;
@@ -28,8 +23,8 @@ b,strong { font-weight: 400}
 h1,h2,h3,h4,h5 { font-weight: 100;}
 #logo {
   height: auto;
-  width: 102%;
-  margin: -1% -0.75% -0.75%;
+  width: 100%;
+  margin: 0;
 }
 section {
   max-width: 800px;
@@ -38,25 +33,33 @@ section {
   padding: 1rem;
   width: 100%;
 }
-section:first-child {
+video {
+  z-index: -1;
+  position: fixed;
+  min-width:100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.logo-wrapper {
+  border: 2.5rem white solid;
   margin-top: 80vh;
   margin-bottom: 0;
   padding: 0;
   font-size: 0;
+  overflow: hidden;
   position: relative;
 }
-section:first-child::before {
+.logo-wrapper::before {
   content: '';
-  background-image: linear-gradient(0deg,
-  rgba(0,0,0,0.5) 0%,
-  rgba(0,0,0,0.0) 20%,
-    rgba(0 0 0,0.5) 40%,
-    rgba(0 0 0,0.0) 60%,
-    rgba(0 0 0,0.5) 80%,
-    rgba(0 0 0,0.0) 100%
-  );
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 0;
+  background-image: url(rocks-waves.jpg);
   background-attachment: fixed;
   bottom: 0;
+  filter: opacity(0.5);
+  mix-blend-mode: screen;
   top:0;
   position: absolute;
   width:100%;
@@ -132,12 +135,35 @@ button:hover {
 }
 
 @media (min-width: 800px) {
-  body {
-     background-image: url(https://lirp-cdn.multiscreensite.com/md/unsplash/dms3rep/multi/opt/photo-1527515234283-d93c5f8486a0-1920w.jpg);
-     background-position: 0 66%;
-  }
   section:first-child {
      margin-top: calc(100vh - (800px * 0.1366) - 4rem);  
   }
   
+}
+
+.animated-gradient-background {
+  background: linear-gradient(90deg, 
+  #264653ff, #2a9d8fff, #e9c46aff, #f4a261ff, #e76f51ff
+  );
+  background-size: 1000% 1000%;
+
+  -webkit-animation: GradientAnimation 16s ease infinite;
+  -moz-animation: GradientAnimation 16s ease infinite;
+  animation: GradientAnimation 16s ease infinite;
+}
+
+@-webkit-keyframes GradientAnimation {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
+}
+@-moz-keyframes GradientAnimation {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
+}
+@keyframes GradientAnimation {
+  0%{background-position:0% 51%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 51%}
 }
