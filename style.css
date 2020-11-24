@@ -42,8 +42,8 @@ video {
   left: 0;
 }
 .logo-wrapper {
-  border: 2.5rem white solid;
-  margin-top: 80vh;
+  border: 2rem white solid;
+  margin-top: calc(100vh - 5rem);
   margin-bottom: 0;
   padding: 0;
   font-size: 0;
@@ -136,7 +136,7 @@ button:hover {
 
 @media (min-width: 800px) {
   section:first-child {
-     margin-top: calc(100vh - (800px * 0.1366) - 4rem);  
+     margin-top: calc(100vh - (800px * 0.1366) - 5rem);  
   }
   
 }
