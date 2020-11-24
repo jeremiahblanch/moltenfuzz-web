@@ -42,7 +42,7 @@ section {
   position: relative;
 }
 .logo-wrapper:first-of-type {
-  margin-top: calc(90vh - 5rem);  
+  margin-top: calc(90vh - 6rem);  
 }
 
 @media (min-width: 800px) {
