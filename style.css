@@ -130,7 +130,7 @@ button:hover {
 .texture {
   background-image: url(texture.png);
   background-repeat: repeat;
-  background-size: 10vh;
+  background-size: 7vh;
   bottom: -100%;
   filter: invert(1);
   left: -100%;
@@ -142,11 +142,11 @@ button:hover {
 
 }
 .animated-gradient-background {
-  background: linear-gradient(90deg, #264653ff, #2a9d8fff, #e9c46aff, #f4a261ff, #e76f51ff, #264653ff, #2a9d8fff, #e9c46aff, #f4a261ff, #e76f51ff);
+  background: linear-gradient(90deg, #f4a261ff, #e76f51ff, #264653ff, #2a9d8fff, #e9c46aff, #f4a261ff, #e76f51ff,  #264653ff, #2a9d8fff, #e9c46aff);
   background-size: 500% 1000%;
-  -webkit-animation: GradientAnimation 20s linear infinite;
-  -moz-animation: GradientAnimation 20s linear infinite;
-  animation: GradientAnimation 20s linear infinite;
+  -webkit-animation: GradientAnimation 45s linear infinite;
+  -moz-animation: GradientAnimation 45s linear infinite;
+  animation: GradientAnimation 45s linear infinite;
 }
 
 @-webkit-keyframes GradientAnimation {
