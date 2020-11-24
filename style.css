@@ -43,29 +43,19 @@ video {
 }
 .logo-wrapper {
   border: 2rem white solid;
-  margin-top: calc(100vh - 5rem);
+  margin-top: calc(92vh - 5rem);  
   margin-bottom: 0;
   padding: 0;
   font-size: 0;
   overflow: hidden;
   position: relative;
 }
-.logo-wrapper::before {
-  content: '';
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 0 0;
-  background-image: url(rocks-waves.jpg);
-  background-attachment: fixed;
-  bottom: 0;
-  filter: opacity(0.5);
-  mix-blend-mode: screen;
-  top:0;
-  position: absolute;
-  width:100%;
-  z-index: -1
+
+@media (min-width: 800px) {
+  .logo-wrapper {
+     margin-top: calc(100vh - (800px * 0.1366) - 5rem);  
+  }
 }
- 
 section.white {
    background-color: #fff; 
 }
@@ -134,22 +124,12 @@ button:hover {
   background-color: #666;
 }
 
-@media (min-width: 800px) {
-  section:first-child {
-     margin-top: calc(100vh - (800px * 0.1366) - 5rem);  
-  }
-  
-}
-
 .animated-gradient-background {
-  background: linear-gradient(90deg, 
-  #264653ff, #2a9d8fff, #e9c46aff, #f4a261ff, #e76f51ff
-  );
-  background-size: 1000% 1000%;
-
-  -webkit-animation: GradientAnimation 16s ease infinite;
-  -moz-animation: GradientAnimation 16s ease infinite;
-  animation: GradientAnimation 16s ease infinite;
+  background: linear-gradient(90deg, #264653ff, #2a9d8fff, #e9c46aff, #f4a261ff, #e76f51ff);
+  background-size: 500% 1000%;
+  -webkit-animation: GradientAnimation 16s ease-in-out infinite;
+  -moz-animation: GradientAnimation 16s ease-in-out infinite;
+  animation: GradientAnimation 16s ease-in-out infinite;
 }
 
 @-webkit-keyframes GradientAnimation {
