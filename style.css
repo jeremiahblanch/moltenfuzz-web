@@ -122,6 +122,7 @@ button {
   margin: 2rem auto 1rem;
   padding: 1rem;
   max-width: 400px;
+  cursor: pointer;
 }
 button:hover {
   background-color: #666;
@@ -141,7 +142,6 @@ button:hover {
   -webkit-animation: ScaleAnimation 60s ease-in-out infinite;
   -moz-animation: ScaleAnimation 60s ease-in-out infinite;
   animation: ScaleAnimation 60s ease-in-out infinite;
-
 }
 .animated-gradient-background {
   background: linear-gradient(90deg, #f4a261ff, #e76f51ff, #264653ff, #2a9d8fff, #e9c46aff, #f4a261ff, #e76f51ff,  #264653ff, #2a9d8fff, #e9c46aff);
