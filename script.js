@@ -14,21 +14,51 @@
     return obj;
   }
 
-  function submitHandler(ev) {
+  const validate = () => {
+    var formData = new FormData(form);
+    var data = formDataToObject(formData);
+
+    if (!data.name) {
+      return { message: 'Please enter your name.' };
+    }
+
+    if (!data.phone) {
+      return { message: 'Please enter your phone number.' };
+    }
+
+    if (!data.email) {
+      return { message: 'Please enter your email address.' };
+    }
+
+    if (!data.message) {
+      return { message: 'Please enter a message explaining your enquiry.' };
+    }
+
     var captchaResponse = grecaptcha.getResponse();
 
+    if (!captchaResponse || captchaResponse.length === 0) {
+      return { message: 'Please tick the "I’m not a robot" checkbox before you hit Send.' };
+    }
+
+    return { success: true };
+  }
+
+  function submitHandler(ev) {
     ev.preventDefault();
     ev.stopImmediatePropagation();
-
-    if (!captchaResponse || captchaResponse.length === 0) {
-      responseEl.innerText = 'Please tick the "I’m not a robot" checkbox before you hit Send.';
-
-      return;
-    }
 
     if (isSubmitting) {
       return;
     }
+
+    var validationResponse = validate();
+    
+    if (!validationResponse.success) {
+      responseEl.innerText = validationResponse.message;
+
+      return;
+    }
+
     isSubmitting = true;
 
     var formData = new FormData(form);
