@@ -1,5 +1,5 @@
 (function (win) {
-    var GOOGLE_API = 'https://script.google.com/macros/s/AKfycbz1mhqP6zZQAPWEncXjUEX9t7_tMGsUG6nv2_p7HxWosqkkDFb-/exec';
+    const GOOGLE_API = 'https://script.google.com/macros/s/AKfycbz6fIHtiqpbhuzuqQV3iRe2nvkMWWari_CBEtwVOnfs_FNyL_nMq4ORFGbq-eDXNkjBkw/exec';
     var form = document.querySelector('form');
     var responseEl = document.querySelector('.form-response');
     var submitEl = document.querySelector('button[type=submit]');
