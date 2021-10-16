@@ -34,12 +34,21 @@ section {
   width: 100%;
 }
 .logo-wrapper {
-  border: 2rem white solid;
+  border: 2.75rem white solid;
   margin-bottom: 0;
   padding: 0;
   font-size: 0;
   overflow: hidden;
   position: relative;
+}
+.logo-wrapper:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px white solid;
 }
 .logo-wrapper:first-of-type {
   margin-top: calc(90vh - 6rem);  
