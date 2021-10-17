@@ -136,6 +136,13 @@ button {
 button:hover {
   background-color: #666;
 }
+.form-error {
+  color: #e76f51ff;
+}
+.form-response {
+  color: 2a9d8fff;
+  text-align: center;
+}
 
 .texture {
   background-image: url(texture5.png);

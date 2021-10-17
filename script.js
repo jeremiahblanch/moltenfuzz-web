@@ -2,6 +2,7 @@
   const GOOGLE_API = 'https://script.google.com/macros/s/AKfycbz6fIHtiqpbhuzuqQV3iRe2nvkMWWari_CBEtwVOnfs_FNyL_nMq4ORFGbq-eDXNkjBkw/exec';
   var form = document.querySelector('form');
   var responseEl = document.querySelector('.form-response');
+  var errorEl = document.querySelector('.form-error');
   var submitEl = document.querySelector('button[type=submit]');
   var isSubmitting;
 
@@ -52,9 +53,9 @@
     }
 
     var validationResponse = validate();
-    
+    errorEl.innerText = '';
     if (!validationResponse.success) {
-      responseEl.innerText = validationResponse.message;
+      errorEl.innerText = validationResponse.message;
 
       return;
     }
