@@ -140,7 +140,8 @@ button:hover {
   color: #e76f51ff;
 }
 .form-response {
-  color: 2a9d8fff;
+  color: #2a9d8fff;
+  font-weight: bold;
   text-align: center;
 }
 
